@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+#export DH_VERBOSE=1
+
+CFLAGS += -Wall -Werror
+
+override_dh_autoreconf:
+	dh_autoreconf --as-needed
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp
+
+%:
+	dh $@ --with autoreconf

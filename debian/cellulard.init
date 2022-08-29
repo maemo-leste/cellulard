@@ -1,0 +1,27 @@
+#!/sbin/openrc-run
+
+name="Cellular control daemon"
+
+depend() {
+	need mce
+}
+
+DAEMON=/usr/sbin/cellulard
+
+[ -e /etc/default/cellulard ] && . /etc/default/cellulard
+
+start() {
+	if [ -x /usr/sbin/dsmetool ]; then
+		dsmetool -f "$DAEMON -n $DAEMON_OPTS"
+	else
+		start-stop-daemon --start --quiet --exec "$DAEMON" -- $DAEMON_OPTS
+	fi
+}
+
+stop() {
+	if [ -x /usr/sbin/dsmetool ]; then
+		dsmetool -k "$DAEMON -n $DAEMON_OPTS"
+	else
+		start-stop-daemon --stop --oknodo --quiet "$DAEMON"
+	fi
+}

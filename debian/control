@@ -1,0 +1,22 @@
+Source: cellulard
+Section: net
+Priority: optional
+Maintainer: Ivaylo Dimitrov <ivo.g.dimitrov.75@gmail.com>
+Build-Depends: debhelper (>= 10),
+               dh-autoreconf,
+               autoconf,
+               automake,
+               libglib2.0-dev,
+               libgofono-dev,
+               libglibutil-dev,
+               libosso-dev,
+               mce-dev
+Standards-Version: 3.7.2
+
+Package: cellulard
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Cellular control daemon
+ The Cellular control daemon, cellulard, is responsible for controlling power
+ and online mode of cellular modems.
