@@ -50,11 +50,6 @@ online_modem(OfonoModem* modem, gboolean online)
   if (online && modem->online != online)
   {
     DLOG_INFO("modem %s set to online", ofono_modem_path(modem));
-    /*
-     * FIXME - ugly hack to make ofono on d4 happy, revert once ofono bug is
-     * fixed
-     */
-    sleep(3);
     ofono_modem_set_online(modem, online);
   }
 }
