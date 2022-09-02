@@ -1,3 +1,9 @@
+cellulard (0.0.2) unstable; urgency=medium
+
+  * Hack for buggy d4 ofono driver
+
+ -- Ivaylo Dimitrov <ivo.g.dimitrov.75@gmail.com>  Fri, 02 Sep 2022 14:38:44 +0300
+
 cellulard (0.0.1) unstable; urgency=medium
 
   * Initial release
