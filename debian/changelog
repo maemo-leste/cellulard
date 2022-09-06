@@ -1,3 +1,9 @@
+cellulard (0.0.3) unstable; urgency=medium
+
+  * Remove the hack for buggy d4 ofono driver
+
+ -- Ivaylo Dimitrov <ivo.g.dimitrov.75@gmail.com>  Tue, 06 Sep 2022 07:41:23 +0300
+
 cellulard (0.0.2) unstable; urgency=medium
 
   * Hack for buggy d4 ofono driver
